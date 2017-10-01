@@ -6,13 +6,14 @@ public class CustomerV2 {
     private String firstname;
     private String name;
 
+    public CustomerV2() {
+    }
 
     public CustomerV2(String id, String firstname, String name) {
         this.id = id;
         this.firstname = firstname;
         this.name = name;
     }
-
 
     public String getId() {
         return id;
