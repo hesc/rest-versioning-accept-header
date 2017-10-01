@@ -10,16 +10,19 @@ import javax.ws.rs.core.MediaType;
 @Path("/customer")
 public class CustomerRessource {
 
+    CustomerRepo repo = new CustomerRepo();
+
     @GET
     @Produces("application/vnd.customerservice-v1+json")
     public CustomerV1 getCustomerV1() {
-        return new CustomerV1("1", "Max", "Muster");
+        return repo.getCustomerV1();
     }
 
     @GET
     @Produces("application/vnd.customerservice-v2+json")
     public CustomerV2 getCustomerV2() {
-        return new CustomerV2("1", "Max", "Muster");
+        return repo.getCustomerV2();
+
     }
 
 
